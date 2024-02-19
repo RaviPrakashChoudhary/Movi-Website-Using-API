@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Alatsi", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgb(18, 29, 25);
+    color: rgb(120, 131, 127);
+}
+
+header {
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(38, 54, 43);
+}
+button{
+    height: 100%;
+    background-color: transparent;
+    border: 2px solid rgb(8, 20, 16);
+    padding: .5rem 1rem;
+    color: rgb(35, 114, 72);
+    border-radius: 50px;
+    font-size: 1rem;
+    font-family: inherit;
+    margin-right: 25px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(11, 26, 20);
+}
+
+.search {
+    background-color: transparent;
+    border: 2px solid rgb(8, 20, 16);
+    padding: .5rem 1rem;
+    color: rgb(87, 104, 95);
+    border-radius: 50px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.search:focus {
+    outline: 0;
+    background-color: rgb(11, 26, 20);
+}
+
+.search::placeholder {
+    color: rgb(105, 107, 106);
+}
+.popular h4{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    padding: .5rem 1rem;
+    color: rgb(138, 148, 143);
+    font-size: 2rem;
+}
+
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie {
+    width: 300px;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 5px 10px 40px rgb(35, 78, 67);
+    background-color: rgb(38, 54, 43);
+    position: relative;
+    overflow: hidden;
+
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movieInfo {
+    color: rgb(197, 197, 197);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem 1rem;
+    letter-spacing: 2px;
+}
+
+.movieInfo span {
+    padding: .25rem .5rem;
+    background-color: rgb(18, 29, 25);
+    font-weight: 600;
+}
+
+.movieInfo span.green {
+    color: rgb(4, 170, 4);
+}
+
+.movieInfo span.orange {
+    color: orange;
+}
+
+.movieInfo span.red {
+    color: red;
+}
+
+.details {
+    position: absolute;
+    color: rgb(180, 182, 181);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(10, 10, 10);
+    padding: 1rem;
+    max-height: 80%;
+    transform: translateY(101%);
+    transition: transform .5s ease-in;
+}
+
+.movie:hover .details {
+    transform: translateY(0);
+}
